@@ -1,6 +1,8 @@
 # Import the required library
 import pyttsx3
 #import objc
+# If have error: NameError: name 'objc' is not defined etc.:
+# https://stackoverflow.com/questions/77197398/error-running-pyttsx3-code-on-os-x-nameerror-name-objc-is-not-defined
 
 # Create a function for text to speech conversion
 def text_to_speech(text):
