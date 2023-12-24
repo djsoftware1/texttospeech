@@ -1,0 +1,6 @@
+pyttsx3
+pyobjc-core
+pyobjc-framework-Cocoa
+pyobjc-framework-Quartz
+pyobjc
+py3-tts
