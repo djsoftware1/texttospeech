@@ -1,4 +1,4 @@
-# Not 100% sure about this exactly list
+# Not 100% sure about this exact list
 pyttsx3
 pyobjc-core
 pyobjc-framework-Cocoa
