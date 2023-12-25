@@ -1,6 +1,7 @@
 # Import the required library
 import pyttsx3
 import sys
+import datetime
 #import objc
 # If have error: NameError: name 'objc' is not defined etc.:
 # https://stackoverflow.com/questions/77197398/error-running-pyttsx3-code-on-os-x-nameerror-name-objc-is-not-defined
@@ -104,6 +105,13 @@ if __name__ == "__main__":
             say_text = ''
         else:
             input_text = input("Enter the text to convert to speech (or /exit or Ctrl+C to exit): ")
+
+        # Log with datetime
+        dt = datetime.datetime.now()
+        formatted_datetime = dt.strftime("%Y-%m-%d %H-%M-%S")
+        with open('texttospeech.log', 'a', encoding='utf-8') as f:
+            f.write(f"[{formatted_datetime}] Text: {input_text}\n")
+
         if input_text=="/quit" or input_text == "/exit" or input_text == "/bye":
             do_exit = True
             break
