@@ -178,8 +178,8 @@ class CSound:
         self.speech_queue.put((None, None, None))
         self.thread.join()
 
-    def play_queued_texts(self):
-        self.engine.runAndWait()  # Start playback of all queued texts
+    #def play_queued_texts(self):
+    #    self.engine.runAndWait()  # Start playback of all queued texts
 
 # Usage example
 if __name__ == "__main__":
