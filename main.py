@@ -104,6 +104,8 @@ if __name__ == "__main__":
             say_text = ''
         else:
             input_text = input("Enter the text to convert to speech (or /exit or Ctrl+C to exit): ")
+        with open('texttospeech.log', 'a', encoding='utf-8') as f:
+            f.write(f"Text: {input_text}\n")
         if input_text=="/quit" or input_text == "/exit" or input_text == "/bye":
             do_exit = True
             break
