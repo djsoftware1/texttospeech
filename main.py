@@ -50,9 +50,13 @@ def text_to_speech(text, use_voice, lang=''):
 
     #engine.setProperty('voice', 1)
 
+    # Stop the current speech if the engine is already speaking
+    if engine.isBusy():
+        engine.stop()
+
     # Convert the text to speech
     engine.say(text)
-    engine.runAndWait()
+    engine.startLoop(False)
 
 # Check if a file passed as argument
 # If yes, read the file and convert the text to speech
